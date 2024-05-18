@@ -12,6 +12,7 @@ This project is a simple Node.js application using Express that fetches photos f
 
 ## Project Structure
 
+```plaintext
 redis-nodejs/
 │
 ├── config/
@@ -46,6 +47,7 @@ redis-nodejs/
 ├── package-lock.json
 ├── package.json
 ├── README.md
+```
 
 ## Requirements
 
