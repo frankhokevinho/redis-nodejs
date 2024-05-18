@@ -10,45 +10,6 @@ This project is a simple Node.js application using Express that fetches photos f
 - Caches responses in Redis
 - Structured using MVC pattern
 
-## Project Structure
-
-```plaintext
-redis-nodejs/
-│
-├── config/
-│ ├── redisClient.js
-│
-├── controllers/
-│ ├── photoController.js
-│
-├── middlewares/
-│ ├── logger.js
-│
-├── models/
-│ ├── photo.js
-│
-├── routes/
-│ ├── photoRoutes.js
-│ ├── routes.js
-│
-├── services/
-│ ├── cacheService.js
-│ ├── photoService.js
-│
-├── tests/
-│ ├── photoService.test.js
-│
-├── utils/
-│ ├── formatDate.js
-│
-├── .gitignore
-├── app.js
-├── index.js
-├── package-lock.json
-├── package.json
-├── README.md
-```
-
 ## Requirements
 
 - Node.js (version 12.x or higher)
@@ -90,6 +51,45 @@ curl http://localhost:3000/photos
 
 ```bash
 curl http://localhost:3000/photos/1
+```
+
+## Project Structure
+
+```plaintext
+redis-nodejs/
+│
+├── config/
+│ ├── redisClient.js
+│
+├── controllers/
+│ ├── photoController.js
+│
+├── middlewares/
+│ ├── logger.js
+│
+├── models/
+│ ├── photo.js
+│
+├── routes/
+│ ├── photoRoutes.js
+│ ├── routes.js
+│
+├── services/
+│ ├── cacheService.js
+│ ├── photoService.js
+│
+├── tests/
+│ ├── photoService.test.js
+│
+├── utils/
+│ ├── formatDate.js
+│
+├── .gitignore
+├── app.js
+├── index.js
+├── package-lock.json
+├── package.json
+├── README.md
 ```
 
 ### More Tips :
