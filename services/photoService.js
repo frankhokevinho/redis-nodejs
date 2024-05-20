@@ -2,6 +2,7 @@ const { Photo } = require("../model/photo.js");
 const axios = require("axios");
 const { getCached, setCached } = require("./cacheService.js");
 const photoApiUrl = "https://jsonplaceholder.typicode.com/photos";
+const cacheExpirationDelay = 3600; // an hour
 
 class PhotoService {
   async getAll() {
@@ -28,7 +29,7 @@ class PhotoService {
       );
 
       // set data to the cache for 1hour
-      await setCached("photos", photos, 3600);
+      await setCached("photos", photos, cacheExpirationDelay);
       console.log("from api");
       return photos;
     } catch (error) {
@@ -53,7 +54,7 @@ class PhotoService {
         photoData.url,
         photoData.thumbnailUrl
       );
-      await setCached(key, photo, 300);
+      await setCached(key, photo, cacheExpirationDelay);
       console.log("from api");
       return photo;
     } catch (error) {
