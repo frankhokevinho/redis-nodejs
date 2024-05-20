@@ -1,6 +1,6 @@
 const Redis = require("ioredis");
 
-const redisClient = new Redis();
+const redisClient = new Redis({ maxRetriesPerRequest: 0 });
 
 redisClient.on("connect", () => {
   console.log(`Connected to redis server`);
